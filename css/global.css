@@ -1,5 +1,5 @@
 body{
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
@@ -8,8 +8,9 @@ body{
 #corner_image{
     position: absolute;
     right: 0;
-}
+    width: 24rem;
 
+}
 
 
 /* styling for header section */
@@ -18,11 +19,11 @@ header {
     background-color: #212529;
     color: white;
     text-align: center;
-    padding: 40px 0 40px 0;
+    padding: 2.5rem 0 2.5rem 0;
 }
 
 header > #logo {
-    width: 400px;
+    width: 28rem;
 }
 
 header > #motto {
@@ -31,12 +32,20 @@ header > #motto {
 }
 
 header > nav {
-    list-style: none;
-    padding: 20px 0;
+    padding: 1rem 0;
 }
 
-header > nav > a {
+header > nav ul{
     display: inline-block;
+    list-style: none;
+}
+
+header > nav li {
+    background-color: green;
+    float: left;
+}
+
+header > nav a {
     background-color: #3366CC;
     padding:10px;
     border-right: 1px solid #264C99;
@@ -44,31 +53,64 @@ header > nav > a {
     color: white;
 }
 
-header > nav > a:first-child {
+header > nav li:first-child > a {
     border-radius: 10px 0 0 10px;
 }
 
-header > nav > a:last-child {
+header > nav li:last-child > a {
     border-radius: 0 10px 10px 0;
 }
 
 /* styling for main section */
 
 main {
-    background-color: red;
-    /*padding: 40px;*/
     display: flex;
     flex-wrap: wrap;
-    align-content: space-evenly;
+    justify-content: center;
 }
 
 main .service {
-    background-color: green;
-    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 30rem;
+    padding: 2rem;
+}
+
+main .service img {
+    float: left;
+    width: 30%;
+}
+
+main .service .service_description {
+    box-sizing: border-box;
+    float: left;
+    width: 70%;
+    padding-left: 2rem;
+}
+
+main .service a {
+    color: #3366CC;
 }
 
 /* styling for footer section */
 
-footer{
+footer {
     background-color: #212529;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+footer p {
+    background-color: #212529;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Hide corner image when it starts to overlap other elements */
+@media screen and (max-width: 80rem){
+    #corner_image{
+        display: none;
+    }
 }
