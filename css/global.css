@@ -12,6 +12,11 @@ body{
 
 }
 
+.btn_active {
+    background-color: white;
+    color: #3366CC;
+}
+
 
 /* styling for header section */
 
