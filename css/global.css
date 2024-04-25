@@ -119,3 +119,25 @@ footer p {
         display: none;
     }
 }
+
+
+/* stying for service details */
+
+.details {
+    margin: 3rem;
+    text-align: center;
+}
+
+.details > img {
+    /* background-color: blue; */
+}
+
+.details > a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    background-color: #3366CC;
+    border-radius: 0.5rem;
+}

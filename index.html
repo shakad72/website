@@ -11,6 +11,17 @@
     <img id="corner_image" src="images/corner_image.png" alt="" />
     <header>
         <img id="logo" src="images/logo.svg" alt="Enterprise Systems Logo" />
+        <div id="motto">
+            <p>
+                Telephone: +592-231-1749<br/>302 Kamoa St., Lamaha Gardens, Georgetown, Guyana, S.A.
+            </p>
+            <p>
+                We're in the business of bringing efficiency to organizations through the use of technology,
+                with a human-centric approach. With many years of experience in a wide cross-section of Information
+                Technology, we deliver resilient technical solutions to small businesses, corporations, and
+                governments... in Guyana, and internationally. Send us a message or give us a call. Perhaps we can help.
+            </p>
+        </div>
         <nav>
             <ul>
                 <li><a id="btn_home" href="?page=home">Home</a></li>
@@ -19,18 +30,6 @@
                 <li><a id="btn_testimonials" href="?page=testimonials">Testimonials</a></li>
             </ul>
         </nav>
-        <div id="motto">
-            <p>
-                We're in the business of bringing efficiency to organizations through the use of technology,
-                with a human-centric approach. With many years of experience in a wide cross-section of Information
-                Technology, we deliver resilient technical solutions to small businesses, corporations, and
-                governments...
-                in Guyana, and internationally.
-            </p>
-            <p>
-                Send us a message or give us a call. Perhaps we can help.
-            </p>
-        </div>
     </header>
 
     <main id="content">
@@ -56,7 +55,14 @@
 
     function AJAXload(page) {
         // highlight button
-        document.getElementById('btn_'+page).className = 'btn_active';
+        console.log(page);
+        if(page.substr(0,8)==='details_'){
+            console.log('test');
+            document.getElementById('btn_home').className = 'btn_active';
+        }else{
+            document.getElementById('btn_'+page).className = 'btn_active';
+        }
+        
         // attemp AJAX call
         if (window.XMLHttpRequest) {
             request = new XMLHttpRequest();
@@ -75,7 +81,7 @@
     function getInfo() {
         if (request.readyState == 4) {
             var val = request.responseText;
-            console.log(val);
+            // console.log(val);
             document.getElementById('content').innerHTML = val;
         }
     }
