@@ -1,0 +1,74 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* Decorative image at the right upper corner */
+
+#corner_image{
+    position: absolute;
+    right: 0;
+}
+
+
+
+/* styling for header section */
+
+header {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 40px 0 40px 0;
+}
+
+header > #logo {
+    width: 400px;
+}
+
+header > #motto {
+    width: 50%;
+    margin: 0 auto;
+}
+
+header > nav {
+    list-style: none;
+    padding: 20px 0;
+}
+
+header > nav > a {
+    display: inline-block;
+    background-color: #3366CC;
+    padding:10px;
+    border-right: 1px solid #264C99;
+    text-decoration: none;
+    color: white;
+}
+
+header > nav > a:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+header > nav > a:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+/* styling for main section */
+
+main {
+    background-color: red;
+    /*padding: 40px;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
+main .service {
+    background-color: green;
+    margin: 20px;
+}
+
+/* styling for footer section */
+
+footer{
+    background-color: #212529;
+}
