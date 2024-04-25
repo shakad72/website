@@ -1,6 +1,3 @@
 {
-    "livePreview.defaultPreviewPath": "/index.html",
-    "files.exclude": {
-        ".vscode": true
-    }
+    "livePreview.defaultPreviewPath": "/index.html"
 }
