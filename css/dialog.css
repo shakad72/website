@@ -1,0 +1,56 @@
+.contact_dialog {
+    /* background-color: red; */
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+.contact_dialog h2{
+    text-align: center;
+    /* background-color: teal; */
+    margin-top: 0;
+}
+
+.contact_dialog .contact_form {
+    /* background-color: blue; */
+}
+
+.contact_dialog label {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.contact_dialog input,textarea {
+    /* background-color: green; */
+    display: block;
+    width: 100%;
+    /* height: 2rem; */
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: 0;
+    background-color: #DDD;
+}
+
+.contact_dialog textarea {
+    height: 6rem;
+}
+
+.contact_buttons {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.contact_buttons button {
+    background-color: gray;
+    border: 0;
+    border-radius: 1rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.contact_buttons button:first-child{
+    background-color: #3366CC;
+}
