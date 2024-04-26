@@ -9,14 +9,15 @@ body{
     position: absolute;
     right: 0;
     width: 24rem;
-
 }
 
-.btn_active {
-    background-color: white;
-    color: #3366CC;
-}
+/* Hide corner image when it starts to overlap other elements */
 
+@media screen and (max-width: 80rem){
+    #corner_image{
+        display: none;
+    }
+}
 
 /* styling for header section */
 
@@ -66,6 +67,11 @@ header > nav li:last-child > a {
     border-radius: 0 10px 10px 0;
 }
 
+.btn_active {
+    background-color: white;
+    color: #3366CC;
+}
+
 /* styling for main section */
 
 main {
@@ -76,10 +82,6 @@ main {
 main > h1 {
     text-align: center;
     margin-bottom: 2rem;
-}
-
-.center {
-    text-align: center;
 }
 
 /* styling of services section */
@@ -119,7 +121,6 @@ main > h1 {
     margin-top: 0.5rem;
     position: absolute;
     bottom: 0;
-
 }
 
 /* styling for footer section */
@@ -138,23 +139,10 @@ footer p {
     padding-bottom: 0.5rem;
 }
 
-/* Hide corner image when it starts to overlap other elements */
-@media screen and (max-width: 80rem){
-    #corner_image{
-        display: none;
-    }
-}
-
-
 /* stying for service details */
 
 .details {
-    /* margin: 3rem; */
     text-align: center;
-}
-
-.details > img {
-    /* background-color: blue; */
 }
 
 /* styling for team */
@@ -177,14 +165,12 @@ footer p {
 
 /* styling for testimonials */
 
-
 .testimonials h1 {
     margin-bottom: 4rem;
     text-align: center;
 }
 
 .testimonials .testimony {
-    /* background-color: red; */
     margin-bottom: 4rem;
     border-left: 0.2rem solid #3366CC;
     padding-left: 1rem;
@@ -198,6 +184,12 @@ footer p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     margin: 0;
+}
+
+/* Miscellaneous */
+
+.center {
+    text-align: center;
 }
 
 .ok_btn {

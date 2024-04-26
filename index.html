@@ -9,7 +9,10 @@
 </head>
 
 <body>
+    <!-- Image that appears in the upper/right corner on a large display -->
     <img id="corner_image" src="images/corner_image.png" alt="" />
+
+    <!-- Header section -->
     <header>
         <img id="logo" src="images/logo.svg" alt="Enterprise Systems Logo" />
         <div id="motto">
@@ -32,7 +35,8 @@
             </ul>
         </nav>
     </header>
-    <!-- Dialog: Start -->
+
+    <!-- Dialog section -->
     <dialog class="contact_dialog">
         <h2>Contact Us</h2>
         <div class="contact_info">
@@ -54,85 +58,18 @@
             </div>
         </form>
     </dialog>
-    <script>
-        var contact_dialog = document.getElementsByClassName('contact_dialog')[0];
-        var contact_form = document.getElementsByTagName('form')[0];
 
-        function showContactForm(){
-            contact_dialog.showModal();
-        }
-
-        function submitContactForm(){
-            // Check validity
-            if(contact_form.checkValidity()){
-                //TODO: Submit via AJAX
-                contact_dialog.close();
-            }
-            //TODO: Submit form using AJAR
-
-            
-        }
-
-        function closeContactForm(){
-            contact_dialog.close();
-            // Clear any residual content
-        }
-    </script>
-
-    <!-- Dialog: End -->
+    <!-- Main section -->
     <main id="content">
-
-
     </main>
 
+    <!-- Footer section -->
     <footer>
         <p>Copyright &copy; 2024 - Student assessment website by S. Dow</p>
     </footer>
+
+    <!-- Javascript for AJAX page loading and handling contact form -->
+    <script src="js/global.js"></script>
 </body>
-<script>
-    window.onload = function () {
-        // acquire parameter
-        const searchParams = new URLSearchParams(window.location.search);
-        if (searchParams.has('page')) {
-            AJAXload(searchParams.get('page'));
-        } else {
-            AJAXload('home');
-        }
-
-    }
-
-    function AJAXload(page) {
-        // highlight button
-        console.log(page);
-        if (page.substr(0, 8) === 'details_') {
-            console.log('test');
-            document.getElementById('btn_home').className = 'btn_active';
-        } else {
-            document.getElementById('btn_' + page).className = 'btn_active';
-        }
-
-        // attemp AJAX call
-        if (window.XMLHttpRequest) {
-            request = new XMLHttpRequest();
-            try {
-                request.onreadystatechange = getInfo;
-                request.open("GET", 'pages/' + page + '.html', true);
-                request.send();
-            } catch (e) {
-                alert("Unable to connect to server");
-            }
-        } else {
-            // display AJAX error by changing class for part of page
-        }
-    }
-
-    function getInfo() {
-        if (request.readyState == 4) {
-            var val = request.responseText;
-            // console.log(val);
-            document.getElementById('content').innerHTML = val;
-        }
-    }
-</script>
 
 </html>

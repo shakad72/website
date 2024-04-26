@@ -1,5 +1,6 @@
+/* Styling used by the contact us dialog */
+
 .contact_dialog {
-    /* background-color: red; */
     width: 30rem;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -8,12 +9,7 @@
 
 .contact_dialog h2{
     text-align: center;
-    /* background-color: teal; */
     margin-top: 0;
-}
-
-.contact_dialog .contact_form {
-    /* background-color: blue; */
 }
 
 .contact_dialog label {
@@ -22,10 +18,8 @@
 }
 
 .contact_dialog input,textarea {
-    /* background-color: green; */
     display: block;
     width: 100%;
-    /* height: 2rem; */
     padding: 0.5rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
