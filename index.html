@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>S. Dow Assessment Website</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dialog.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
         <img id="logo" src="images/logo.svg" alt="Enterprise Systems Logo" />
         <div id="motto">
             <p>
-                Telephone: +592-231-1749<br/>302 Kamoa St., Lamaha Gardens, Georgetown, Guyana, S.A.
+                Telephone: +592-231-1749<br />302 Kamoa St., Lamaha Gardens, Georgetown, Guyana, S.A.
             </p>
             <p>
                 We're in the business of bringing efficiency to organizations through the use of technology,
@@ -25,15 +26,62 @@
         <nav>
             <ul>
                 <li><a id="btn_home" href="?page=home">Home</a></li>
-                <li><a id="btn_contact_us" href="?page=contact_us">Contact Us</a></li>
+                <li><a id="btn_contact_us" href="#" onclick="showContactForm()">Contact Us</a></li>
                 <li><a id="btn_our_team" href="?page=our_team">Our Team</a></li>
                 <li><a id="btn_testimonials" href="?page=testimonials">Testimonials</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Dialog: Start -->
+    <dialog class="contact_dialog">
+        <h2>Contact Us</h2>
+        <div class="contact_info">
+            <p>
+                Need further information on any of the services we offer?
+                Do you need assistance in an area that is not mentioned? Enquiries are welcomed.
+            </p>
+        </div>
+        <form class="contact_form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required/>
+            <label for="email">E-Mail Address</label>
+            <input type="email" id="email" name="email" required/>
+            <label for="message">Message</label>
+            <textarea type="text" id="message" name="message"></textarea>
+            <div class="contact_buttons">
+                <button type="submit" onclick="submitContactForm()">Submit</button>
+                <button type="reset" onclick="closeContactForm()">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+    <script>
+        var contact_dialog = document.getElementsByClassName('contact_dialog')[0];
+        var contact_form = document.getElementsByTagName('form')[0];
 
+        function showContactForm(){
+            contact_dialog.showModal();
+        }
+
+        function submitContactForm(){
+            // Check validity
+            if(contact_form.checkValidity()){
+                //TODO: Submit via AJAX
+                contact_dialog.close();
+            }
+            //TODO: Submit form using AJAR
+
+            
+        }
+
+        function closeContactForm(){
+            contact_dialog.close();
+            // Clear any residual content
+        }
+    </script>
+
+    <!-- Dialog: End -->
     <main id="content">
-     
+
 
     </main>
 
@@ -47,7 +95,7 @@
         const searchParams = new URLSearchParams(window.location.search);
         if (searchParams.has('page')) {
             AJAXload(searchParams.get('page'));
-        }else{
+        } else {
             AJAXload('home');
         }
 
@@ -56,19 +104,19 @@
     function AJAXload(page) {
         // highlight button
         console.log(page);
-        if(page.substr(0,8)==='details_'){
+        if (page.substr(0, 8) === 'details_') {
             console.log('test');
             document.getElementById('btn_home').className = 'btn_active';
-        }else{
-            document.getElementById('btn_'+page).className = 'btn_active';
+        } else {
+            document.getElementById('btn_' + page).className = 'btn_active';
         }
-        
+
         // attemp AJAX call
         if (window.XMLHttpRequest) {
             request = new XMLHttpRequest();
             try {
                 request.onreadystatechange = getInfo;
-                request.open("GET", 'pages/'+page+'.html', true);
+                request.open("GET", 'pages/' + page + '.html', true);
                 request.send();
             } catch (e) {
                 alert("Unable to connect to server");
