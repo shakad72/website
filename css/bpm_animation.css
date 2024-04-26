@@ -1,0 +1,29 @@
+@keyframes example {
+    10%  {left:18px; top:41px;}
+    20%  {left:110px; top:41px;}
+    30%  {left:110px; top:150px;}
+    40%  {left:242px; top:150px;}
+    50%  {left:360px; top:150px;}
+    60%  {left:360px; top:41px}
+    70%  {left:500px; top:41px}
+    80%  {left:630px; top:41px}
+    100% {left:630px; top:41px}
+  }
+
+.bpm_animation {
+    /* background-color: red; */
+    background-image: url("../images/bpm_process.svg");
+    width: 681px;
+    height: 218px;
+    position: relative;
+    display: inline-block;
+}
+
+.bpm_animation img {
+    position: absolute;
+    top: 41px;
+    left: 18px;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
