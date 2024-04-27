@@ -37,40 +37,44 @@ header > #motto {
     margin: 0 auto;
 }
 
-header > nav {
-    padding: 1rem 0;
-}
+/* style for button bar in the header section */
 
-header > nav ul{
+
+.button_bar {
+    padding: 1rem 0;
     display: inline-block;
     list-style: none;
 }
 
-header > nav li {
-    background-color: green;
+.button_bar li {
     float: left;
 }
 
-header > nav a {
-    background-color: #3366CC;
+.button_bar a {
     padding:10px;
     border-right: 1px solid #264C99;
     text-decoration: none;
-    color: white;
+    cursor: pointer;
 }
 
-header > nav li:first-child > a {
+header > nav li:first-child a {
     border-radius: 10px 0 0 10px;
 }
 
-header > nav li:last-child > a {
+header > nav li:last-child a {
     border-radius: 0 10px 10px 0;
+}
+
+.btn_inactive{
+    background-color: #3366CC;
+    color: white;
 }
 
 .btn_active {
     background-color: white;
     color: #3366CC;
 }
+
 
 /* styling for main section */
 
@@ -87,40 +91,30 @@ main > h1 {
 /* styling of services section */
 
 .services {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.services .service {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 30rem;
-    padding: 2rem;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    margin: 2rem;
 }
 
 .services .service img {
     float: left;
-    width: 30%;
+    width: 25%;
+}
+
+.services .service h2 {
+    margin-top: 0;
 }
 
 .services .service .service_description {
     box-sizing: border-box;
     float: left;
-    width: 70%;
+    width: 75%;
     padding-left: 2rem;
 }
 
 .services .service a {
-    display: inline-block;
-    background-color: #3366CC;
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    margin-top: 0.5rem;
-    position: absolute;
-    bottom: 0;
+    color: blue;
 }
 
 /* styling for footer section */

@@ -1,5 +1,6 @@
 @keyframes example {
-    10%  {left:18px; top:41px;}
+    0%  {left:17px; top:41px;} 
+    10%  {left:17px; top:41px;} 
     20%  {left:110px; top:41px;}
     30%  {left:110px; top:150px;}
     40%  {left:242px; top:150px;}
@@ -7,6 +8,7 @@
     60%  {left:360px; top:41px}
     70%  {left:500px; top:41px}
     80%  {left:630px; top:41px}
+    90% {left:630px; top:41px}
     100% {left:630px; top:41px}
   }
 
@@ -21,8 +23,8 @@
 
 .bpm_animation img {
     position: absolute;
-    top: 41px;
-    left: 18px;
+    /* top: 41px;
+    left: 17px; */
     animation-name: example;
     animation-duration: 6s;
     animation-iteration-count: infinite;

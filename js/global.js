@@ -56,6 +56,11 @@ function AJAXload(page) {
     if (page.substr(0, 8) === 'details_') {
         document.getElementById('btn_home').className = 'btn_active';
     } else {
+        // Clear classes from buttons first
+        let liElements = document.getElementsByTagName('ul')[0].children;
+        for(x=0;x<liElements.length;x++){
+            liElements[x].className="";
+        }
         document.getElementById('btn_' + page).className = 'btn_active';
     }
 
@@ -73,6 +78,7 @@ function AJAXload(page) {
         // TODO: Use alternative AJAX call since XMLHttpRequest is not available for use
     }
 }
+
 
 /*
 Function that is called when the AJAX call has been successfully completed.

@@ -28,11 +28,11 @@
             </p>
         </div>
         <nav>
-            <ul>
-                <li><a id="btn_home" href="?page=home">Home</a></li>
-                <li><a id="btn_contact_us" href="#" onclick="showContactForm()">Contact Us</a></li>
-                <li><a id="btn_our_team" href="?page=our_team">Our Team</a></li>
-                <li><a id="btn_testimonials" href="?page=testimonials">Testimonials</a></li>
+            <ul class="button_bar">
+                <li><a id="btn_home" class="btn_inactive" href="?page=home">Home</a></li>
+                <li><a id="btn_contact_us" class="btn_inactive" href="#" onclick="showContactForm()">Contact Us</a></li>
+                <li><a id="btn_our_team" class="btn_inactive" href="?page=our_team">Our Team</a></li>
+                <li><a id="btn_testimonials" class="btn_inactive" href="?page=testimonials">Testimonials</a></li>
             </ul>
         </nav>
     </header>
@@ -54,7 +54,7 @@
             <label for="message">Message</label>
             <textarea type="text" id="message" name="message"></textarea>
             <div class="contact_buttons">
-                <button type="submit" onclick="submitContactForm()">Submit</button>
+                <button type="submit" onclick="submitContactForm();return false;">Submit</button>
                 <button type="reset" onclick="closeContactForm()">Cancel</button>
             </div>
         </form>
