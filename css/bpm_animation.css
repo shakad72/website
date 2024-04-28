@@ -1,15 +1,15 @@
 @keyframes example {
-    0%  {left:17px; top:41px;} 
+    0%  {left:16px; top:41px;} 
     10%  {left:17px; top:41px;} 
     20%  {left:110px; top:41px;}
-    30%  {left:110px; top:150px;}
-    40%  {left:242px; top:150px;}
-    50%  {left:360px; top:150px;}
+    30%  {left:110px; top:154px;}
+    40%  {left:242px; top:154px;}
+    50%  {left:360px; top:154px;}
     60%  {left:360px; top:41px}
     70%  {left:500px; top:41px}
-    80%  {left:630px; top:41px}
-    90% {left:630px; top:41px}
-    100% {left:630px; top:41px}
+    80%  {left:629px; top:41px}
+    90% {left:629px; top:41px}
+    100% {left:629px; top:41px}
   }
 
 .bpm_animation {

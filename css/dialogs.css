@@ -1,4 +1,4 @@
-/* Styling used by the contact us dialog */
+/* Styling for the contact dialog */
 
 .contact_dialog {
     width: 30rem;
@@ -47,4 +47,18 @@
 
 .contact_buttons button:first-child{
     background-color: #3366CC;
+}
+
+/* styling for the contact submitted dialog */
+
+.contact_submitted_dialog {
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    text-align: center;
+}
+
+.contact_submitted_dialog > img {
+    width: 3rem;
 }

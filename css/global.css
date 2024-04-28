@@ -194,5 +194,6 @@ footer p {
     padding: 0.5rem 1rem;
     background-color: #3366CC;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
